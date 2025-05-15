@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-sans text-charcoal-800 bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-primary-700;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded transition-all duration-300 inline-block text-center font-medium;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-700 text-white hover:bg-primary-800;
+  }
+  
+  .btn-secondary {
+    @apply bg-gold-500 text-white hover:bg-gold-600;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary-700 text-primary-700 hover:bg-primary-700 hover:text-white;
+  }
+  
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-primary-700;
+  }
+  
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-medium mb-12 text-charcoal-600 max-w-3xl mx-auto;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-elegant overflow-hidden transition-all duration-300;
+  }
+  
+  .feature-card {
+    @apply p-6 border border-gray-100 rounded-lg hover:shadow-elegant transition-all duration-300 bg-white;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all duration-300;
+  }
+  
+  .product-card {
+    @apply relative overflow-hidden rounded-lg shadow-elegant bg-white;
+  }
+  
+  .product-card-img-container {
+    @apply relative overflow-hidden h-64;
+  }
+  
+  .product-card-img {
+    @apply w-full h-full object-cover transition-transform duration-500 ease-in-out;
+  }
+  
+  .product-card:hover .product-card-img {
+    @apply scale-110;
+  }
+  
+  .product-card-content {
+    @apply p-5;
+  }
+  
+  .category-card {
+    @apply relative overflow-hidden rounded-lg shadow-elegant;
+  }
+  
+  .category-card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80 transition-opacity duration-300;
+  }
+  
+  .category-card:hover .category-card-overlay {
+    @apply opacity-90;
+  }
+  
+  .category-card-content {
+    @apply absolute bottom-0 left-0 right-0 p-6 text-white z-10;
+  }
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #111827 !important; /* gray-900 */
+  color: #f3f4f6 !important; /* gray-100 */
+}
+
+/* General background and text overrides */
+body.dark-mode .bg-gray-50 {
+  background-color: #1f2937 !important; /* gray-800 */
+}
+body.dark-mode .bg-white {
+  background-color: #1f2937 !important; /* gray-800 */
+}
+body.dark-mode .text-charcoal-800,
+body.dark-mode .text-charcoal-700,
+body.dark-mode .text-charcoal-600,
+body.dark-mode .text-gray-700, /* Added for contact form labels */
+body.dark-mode .text-gray-600 { /* Added for contact form paragraph */
+  color: #d1d5db !important; /* gray-300 */
+}
+body.dark-mode .text-primary-700 {
+  color: #FBBF24 !important; /* amber-400 */
+}
+body.dark-mode .text-gold-500 {
+  color: #FBBF24 !important; /* amber-400 */
+}
+body.dark-mode .text-white { /* Ensure text meant to be white on dark backgrounds stays white */
+  /* color: #ffffff !important; */ /* Usually fine, but check specific contexts */
+}
+
+
+/* Header */
+body.dark-mode #header {
+  background-color: #1f2937 !important; /* gray-800 */
+  border-bottom: 1px solid #374151; /* gray-700 */
+}
+body.dark-mode #header nav a,
+body.dark-mode #mobile-menu-button,
+body.dark-mode #darkModeToggle svg,
+body.dark-mode #darkModeToggleMobile svg {
+  color: #f3f4f6 !important; /* gray-100 */
+}
+body.dark-mode #header nav a:hover {
+  color: #FBBF24 !important; /* amber-400 */
+}
+body.dark-mode #mobile-menu {
+  background-color: #1f2937 !important; /* gray-800 */
+  border-top: 1px solid #374151;
+}
+body.dark-mode #mobile-menu a {
+  color: #f3f4f6 !important; /* gray-100 */
+}
+body.dark-mode #mobile-menu a:hover {
+  color: #FBBF24 !important; /* amber-400 */
+}
+
+/* Hero Section */
+body.dark-mode #hero .bg-gradient-to-r {
+  background-image: linear-gradient(to right, rgba(17, 24, 39, 0.85), rgba(31, 41, 55, 0.75)) !important; /* Darker, less colorful gradient */
+}
+body.dark-mode #hero .text-white { /* This class is used for hero text */
+   color: #ffffff !important; /* Ensure it remains white */
+}
+body.dark-mode #hero .btn.bg-white { /* "Contact Us" button in hero */
+  background-color: #e5e7eb !important; /* gray-200 */
+  color: #1f2937 !important; /* gray-800 */
+}
+body.dark-mode #hero .btn.bg-white:hover {
+  background-color: #d1d5db !important; /* gray-300 */
+}
+body.dark-mode #hero .animate-bounce svg {
+  stroke: #f3f4f6 !important;
+}
+
+
+/* Sections, Titles, Subtitles */
+body.dark-mode .section-title {
+  color: #f3f4f6 !important; /* gray-100 */
+}
+body.dark-mode .section-subtitle {
+  color: #9ca3af !important; /* gray-400 */
+}
+body.dark-mode .bg-gold-500 { /* The underline for titles */
+  background-color: #FBBF24 !important; /* amber-400 */
+}
+
+/* Cards (Feature, Product, Category) */
+body.dark-mode .feature-card,
+body.dark-mode .product-card {
+  background-color: #374151 !important; /* gray-700 */
+  border-color: #4b5563 !important; /* gray-600 */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.12) !important; /* Adjusted shadow for dark */
+}
+body.dark-mode .category-card .category-card-overlay {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+body.dark-mode .category-card .category-card-content h3,
+body.dark-mode .category-card .category-card-content p {
+  color: #ffffff !important; /* Text on category cards should remain white */
+}
+body.dark-mode .category-card .btn { /* Button on category cards */
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+body.dark-mode .category-card .btn:hover {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+
+/* Buttons */
+body.dark-mode .btn-primary {
+  background-color: #FBBF24 !important; /* amber-400 */
+  color: #111827 !important; /* gray-900 */
+}
+body.dark-mode .btn-primary:hover {
+  background-color: #fbbf24b3 !important; /* amber-400 with opacity */
+}
+body.dark-mode .btn-secondary { /* e.g., "Browse the Catalogue" in hero */
+  background-color: #4b5563 !important; /* gray-600 */
+  color: #f3f4f6 !important; /* gray-100 */
+}
+body.dark-mode .btn-secondary:hover {
+  background-color: #6b7280 !important; /* gray-500 */
+}
+
+
+/* Swiper Navigation/Pagination */
+body.dark-mode .swiper-button-next,
+body.dark-mode .swiper-button-prev {
+  color: #FBBF24 !important; /* amber-400 */
+}
+body.dark-mode .swiper-pagination-bullet {
+  background: #6b7280 !important; /* gray-500 */
+}
+body.dark-mode .swiper-pagination-bullet-active {
+  background: #FBBF24 !important; /* amber-400 */
+}
+
+/* Contact Form */
+body.dark-mode #contact input[type="text"],
+body.dark-mode #contact input[type="email"],
+body.dark-mode #contact textarea {
+  background-color: #374151 !important; /* gray-700 */
+  color: #f3f4f6 !important; /* gray-100 */
+  border-color: #4b5563 !important; /* gray-600 */
+}
+body.dark-mode #contact input[type="text"]::placeholder,
+body.dark-mode #contact input[type="email"]::placeholder,
+body.dark-mode #contact textarea::placeholder {
+  color: #9ca3af !important; /* gray-400 */
+}
+body.dark-mode #contact label {
+    color: #d1d5db !important; /* gray-300 */
+}
+
+/* Footer */
+body.dark-mode footer {
+  background-color: #111827 !important; /* gray-900 (darker than section bg) */
+  color: #9ca3af !important; /* gray-400 */
+  border-top: 1px solid #374151; /* gray-700 */
+}
+body.dark-mode footer a {
+  color: #d1d5db !important; /* gray-300 */
+}
+body.dark-mode footer a:hover {
+  color: #FBBF24 !important; /* amber-400 */
+}
+body.dark-mode footer .text-gold-500 { /* Footer logo text if any */
+    color: #FBBF24 !important;
+}
+
+/* Ensure toggle button icons also change color */
+body.dark-mode #darkModeToggle #sunIcon,
+body.dark-mode #darkModeToggle #moonIcon,
+body.dark-mode #darkModeToggleMobile #sunIconMobile,
+body.dark-mode #darkModeToggleMobile #moonIconMobile {
+  color: #f3f4f6 !important; /* Light icon color in dark mode */
+}
+
+/* Specific image adjustments if needed, e.g., for logos that don't look good on dark */
+/* body.dark-mode .some-logo-class { filter: invert(1) hue-rotate(180deg); } */
+
+
+/* Fixed Sideline - REMOVED */
+/*
+#fixed-sideline {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 8px; 
+  height: 100vh;
+  background: linear-gradient(to bottom, #1e3a8a, #3b82f6); 
+  z-index: 1000; 
+  box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+  transition: width 0.3s ease; 
+}
+*/
+
+/* Optional: Creative hover effect for sideline - REMOVED */
+/*
+#fixed-sideline:hover {
+  width: 12px;
+}
+*/
+
+/* Cursor Light */
+#cursor-light {
+  position: fixed;
+  width: 10px; /* Size of the light - Made smaller */
+  height: 10px; /* Size of the light - Made smaller */
+  background-color: #FBBF24; /* Gold color (Tailwind's amber-400) */
+  border-radius: 50%;
+  pointer-events: none; /* Allows clicking through the light */
+  z-index: 9999; /* Highest z-index to be on top of everything */
+  transform: translate(-50%, -50%); /* Center the light on the cursor */
+  opacity: 0; /* Initially hidden, shown on mouse enter */
+  transition: opacity 0.2s ease-out, transform 0.05s linear; /* Smooth appearance and movement */
+  box-shadow: 0 0 10px 3px #FBBF24, 0 0 15px 7px rgba(251, 191, 36, 0.5); /* Adjusted glow for smaller size */
+}
+
+body.dark-mode #cursor-light {
+  background-color: #F59E0B; /* Slightly different gold for dark mode if desired (amber-500) */
+  box-shadow: 0 0 10px 3px #F59E0B, 0 0 15px 7px rgba(245, 158, 11, 0.5); /* Adjusted glow for smaller size */
+}

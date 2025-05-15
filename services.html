@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Square Hospitality Trading Company</title>
+  <meta name="description" content="Explore the services offered by Horeca Square, your premium hospitality and home-décor supplier.">
+  <link rel="stylesheet" href="./src/assets/css/style.css">
+  <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
+  <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
+</head>
+<body>
+  <!-- Cursor Light -->
+  <div id="cursor-light"></div>
+
+  <!-- Header -->
+  <header id="header" class="fixed w-full z-50 transition-all duration-300 bg-white dark:bg-gray-900 shadow-md"> 
+    <div class="container-custom py-1 flex justify-between items-center">
+      <a href="index.html" class="flex items-center"> 
+        <img src="./src/assets/images/horecalogo.png" alt="Horeca Square Logo" class="h-12"> 
+      </a>
+      <nav class="hidden md:flex space-x-8 items-center"> 
+        <a href="index.html#about" class="text-gold-500 hover:text-blue-600 dark:text-gray-300 dark:hover:text-gold-400 font-medium transition-colors">About</a>
+        <a href="index.html#products" class="text-gold-500 hover:text-blue-600 dark:text-gray-300 dark:hover:text-gold-400 font-medium transition-colors">Products</a>
+        <a href="services.html" class="text-blue-600 dark:text-gold-500 font-medium transition-colors">Services</a> 
+        <a href="index.html#why-us" class="text-gold-500 hover:text-blue-600 dark:text-gray-300 dark:hover:text-gold-400 font-medium transition-colors">Why Us</a>
+        <a href="index.html#contact" class="text-gold-500 hover:text-blue-600 dark:text-gray-300 dark:hover:text-gold-400 font-medium transition-colors">Contact</a>
+        <a href="./src/assets/pdf/Home Decor Shop Catalog Brochure_compressed (1).pdf" download="HorecaSquare_Catalogue.pdf" class="btn btn-primary ml-4">Download Catalogue</a>
+        <button id="darkModeToggle" class="ml-4 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500" aria-label="Toggle dark mode">
+          <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-charcoal-800 dark:text-gray-300">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-6.364-.386l1.591-1.591M3 12h2.25m.386-6.364l1.591 1.591" />
+          </svg>
+          <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-charcoal-800 dark:text-gray-300 hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+          </svg>
+        </button>
+      </nav>
+      <div class="md:hidden flex items-center"> 
+        <button id="darkModeToggleMobile" class="mr-2 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500" aria-label="Toggle dark mode">
+          <svg id="sunIconMobile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-charcoal-800 dark:text-gray-300">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-6.364-.386l1.591-1.591M3 12h2.25m.386-6.364l1.591 1.591" />
+          </svg>
+          <svg id="moonIconMobile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-charcoal-800 dark:text-gray-300 hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+          </svg>
+        </button>
+        <button id="mobile-menu-button" class="text-charcoal-800 dark:text-gray-300">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-800 shadow-md py-4">
+      <div class="container-custom space-y-4">
+        <a href="index.html#about" class="block text-gold-500 hover:text-blue-600 dark:text-gray-300 dark:hover:text-gold-400 font-medium transition-colors">About</a>
+        <a href="index.html#products" class="block text-gold-500 hover:text-blue-600 dark:text-gray-300 dark:hover:text-gold-400 font-medium transition-colors">Products</a>
+        <a href="services.html" class="block text-blue-600 dark:text-gold-500 font-medium transition-colors">Services</a>  
+        <a href="index.html#why-us" class="block text-gold-500 hover:text-blue-600 dark:text-gray-300 dark:hover:text-gold-400 font-medium transition-colors">Why Us</a>
+        <a href="index.html#contact" class="block text-gold-500 hover:text-blue-600 dark:text-gray-300 dark:hover:text-gold-400 font-medium transition-colors">Contact</a>
+        <a href="./src/assets/pdf/Home Decor Shop Catalog Brochure_compressed (1).pdf" download="HorecaSquare_Catalogue.pdf" class="block text-center btn btn-primary mt-4">Download Catalogue</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content for Services Page -->
+  <main class="pt-20">
+    <section id="service-details" class="section">
+      <div class="container-custom">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service Item 1 -->
+          <div class="feature-card z-10" data-aos="fade-up">
+            <h3 class="text-2xl font-serif font-bold mb-3">Product Sourcing</h3>
+            <p class="text-charcoal-600">We specialize in sourcing high-quality tableware, glassware, kitchenware, and guest amenities tailored to your brand and budget.</p>
+          </div>
+          <!-- Service Item 2 -->
+          <div class="feature-card z-10" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-2xl font-serif font-bold mb-3">Customization</h3>
+            <p class="text-charcoal-600">Offer bespoke solutions, including custom branding on products to enhance your establishment's identity.</p>
+          </div>
+          <!-- Service Item 3 -->
+          <div class="feature-card z-10" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-2xl font-serif font-bold mb-3">Consultation</h3>
+            <p class="text-charcoal-600">Our experts provide consultation services to help you select the perfect products that align with your concept and operational needs.</p>
+          </div>
+          <!-- Add more service items as needed -->
+        </div>
+      </div>
+    </section>
+    
+    <!-- You can add more sections here as needed -->
+
+  </main>
+
+  <!-- Footer (can be copied from index.html or made into a reusable component if using a framework) -->
+  <footer class="bg-charcoal-800 text-gray-300 py-16">
+    <div class="container-custom">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <img src="./src/assets/images/horecalogo.png" alt="Horeca Square Logo" class="h-16 mb-4">
+                <p class="text-sm">Premium hospitality and home-décor supplier established in 2015, delivering exceptional quality and service.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html#about" class="hover:text-gold-500 transition-colors">About Us</a></li>
+                    <li><a href="index.html#products" class="hover:text-gold-500 transition-colors">Products</a></li>
+                    <li><a href="services.html" class="hover:text-gold-500 transition-colors">Services</a></li>
+                    <li><a href="index.html#why-us" class="hover:text-gold-500 transition-colors">Why Us</a></li>
+                    <li><a href="index.html#contact" class="hover:text-gold-500 transition-colors">Contact</a></li>
+                    <li><a href="./src/assets/pdf/Home Decor Shop Catalog Brochure_compressed (1).pdf" download="HorecaSquare_Catalogue.pdf" class="hover:text-gold-500 transition-colors">Download Catalogue (PDF)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Stay Updated</h4>
+                <p class="text-sm mb-4">Subscribe to our newsletter for the latest product updates and hospitality trends.</p>
+                <form class="flex">
+                    <input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded-l-md focus:outline-none text-charcoal-800">
+                    <button type="submit" class="bg-gold-500 text-white px-4 py-2 rounded-r-md hover:bg-gold-600 transition-colors">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 pt-8 text-center text-sm">
+            <p>&copy; <span id="currentYear"></span> Horeca Square Trading Company. All Rights Reserved.</p>
+        </div>
+    </div>
+  </footer>
+
+  <script src="node_modules/aos/dist/aos.js"></script>
+  <script src="node_modules/swiper/swiper-bundle.min.js"></script>
+  <script type="module" src="./src/js/main.js"></script> 
+  
+  <script>
+    // Dark Mode Toggle Script (copied from index.html for standalone functionality)
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const darkModeToggleMobile = document.getElementById('darkModeToggleMobile');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+    const sunIconMobile = document.getElementById('sunIconMobile');
+    const moonIconMobile = document.getElementById('moonIconMobile');
+    const body = document.body;
+
+    const applyTheme = (theme) => {
+      if (theme === 'dark') {
+        body.classList.add('dark-mode');
+        moonIcon?.classList.remove('hidden');
+        sunIcon?.classList.add('hidden');
+        moonIconMobile?.classList.remove('hidden');
+        sunIconMobile?.classList.add('hidden');
+      } else {
+        body.classList.remove('dark-mode');
+        sunIcon?.classList.remove('hidden');
+        moonIcon?.classList.add('hidden');
+        sunIconMobile?.classList.remove('hidden');
+        moonIconMobile?.classList.add('hidden');
+      }
+    };
+
+    const toggleTheme = () => {
+      const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', newTheme);
+      applyTheme(newTheme);
+    };
+
+    darkModeToggle?.addEventListener('click', toggleTheme);
+    darkModeToggleMobile?.addEventListener('click', toggleTheme);
+
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem('theme');
+    const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    applyTheme(savedTheme || preferredTheme);
+    
+    // Update year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Cursor Light Script (copied from index.html)
+    const cursorLight = document.getElementById('cursor-light');
+    if (cursorLight) {
+      document.addEventListener('mousemove', function(e) {
+        cursorLight.style.left = e.clientX + 'px';
+        cursorLight.style.top = e.clientY + 'px';
+      });
+      document.addEventListener('mouseenter', function() {
+        cursorLight.style.opacity = '1';
+      });
+      document.addEventListener('mouseleave', function() {
+        cursorLight.style.opacity = '0';
+      });
+    }
+  </script>
+</body>
+</html>

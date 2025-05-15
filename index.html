@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Square Hospitality Trading Company</title>
+  <meta name="description" content="Premium hospitality and home-décor supplier offering tableware, glassware, kitchenware, housekeeping and guest-amenity products.">
+  <link rel="stylesheet" href="./src/assets/css/style.css">
+  <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
+  <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
+</head>
+<body>
+  <!-- Cursor Light -->
+  <div id="cursor-light"></div>
+
+  <!-- Header -->
+  <header id="header" class="fixed w-full z-50 transition-all duration-300">
+    <div class="container-custom py-4 flex justify-between items-center">
+      <a href="#" class="flex items-center">
+        <img src="./src/assets/images/horecalogo.png" alt="Horeca Square Logo" class="h-20"> 
+      </a>
+      <nav class="hidden md:flex space-x-8 items-center"> 
+        <a href="#about" class="text-gold-500 hover:text-blue-600 font-medium transition-colors">About</a>
+        <a href="#products" class="text-gold-500 hover:text-blue-600 font-medium transition-colors">Products</a>
+        <a href="services.html" class="text-gold-500 hover:text-blue-600 font-medium transition-colors">Services</a> 
+        <a href="#why-us" class="text-gold-500 hover:text-blue-600 font-medium transition-colors">Why Us</a>
+        <a href="#contact" class="text-gold-500 hover:text-blue-600 font-medium transition-colors">Contact</a>
+        
+          <!-- download -->
+
+        <a href="./src/assets/pdf/Home Decor Shop Catalog Brochure_compressed (1).pdf" download="HorecaSquare_Catalogue.pdf" class="btn btn-primary ml-4">Download Catalogue</a>
+        <button id="darkModeToggle" class="ml-4 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500" aria-label="Toggle dark mode">
+          <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-charcoal-800">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-6.364-.386l1.591-1.591M3 12h2.25m.386-6.364l1.591 1.591" />
+          </svg>
+          <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-charcoal-800 hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+          </svg>
+        </button>
+      </nav>
+      <div class="md:hidden flex items-center"> 
+        
+        <button id="darkModeToggleMobile" class="mr-2 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500" aria-label="Toggle dark mode">
+          <svg id="sunIconMobile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-charcoal-800">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-6.364-.386l1.591-1.591M3 12h2.25m.386-6.364l1.591 1.591" />
+          </svg>
+          <svg id="moonIconMobile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-charcoal-800 hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+          </svg>
+        </button>
+        <button id="mobile-menu-button" class="text-charcoal-800">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-md py-4">
+      <div class="container-custom space-y-4">
+        <a href="#about" class="block text-gold-500 hover:text-blue-600 font-medium transition-colors">About</a>
+        <a href="#products" class="block text-gold-500 hover:text-blue-600 font-medium transition-colors">Products</a>
+        <a href="services.html" class="block text-gold-500 hover:text-blue-600 font-medium transition-colors">Services</a>
+        <a href="#why-us" class="block text-gold-500 hover:text-blue-600 font-medium transition-colors">Why Us</a>
+        <a href="#contact" class="block text-gold-500 hover:text-blue-600 font-medium transition-colors">Contact</a>
+        <a href="./src/assets/pdf/catalogue.pdf" download="HorecaSquare_Catalogue.pdf" class="block text-center btn btn-primary mt-4">Download Catalogue</a>
+      </div>
+    </div>
+  </header>
+
+  
+  <!-- Hero Section -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="./src/assets/images/behindnav.jpg" alt="Elegant Dining Table" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-primary-700/80 to-charcoal-800/60"></div>
+    </div>
+    <div class="container-custom relative z-10 text-white text-center" data-aos="fade-up">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6">Square Hospitality Trading Company</h1>
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-10">Explore our meticulously planned catalogue of world-class tableware, glassware, linens & amenities.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#products" class="btn btn-secondary">Browse the Catalogue</a>
+        <a href="#contact" class="btn bg-white text-primary-700 hover:bg-gray-100">Contact Us</a>
+      </div>
+    </div>
+    <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+      <a href="#about" class="text-white animate-bounce">
+        <svg xmlns="./" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="section-title">About Us</h2>
+        <div class="w-24 h-1 bg-gold-500 mx-auto mb-6"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <img src="./src/assets/images/how we are.jpg" alt="Square Hospitality Team" class="rounded-lg shadow-elegant w-full h-auto">
+        </div>
+        <div data-aos="fade-left">
+          <h3 class="text-2xl md:text-3xl font-serif font-bold mb-6">Established in 2015</h3>
+          <p class="text-lg text-charcoal-700 mb-6 leading-relaxed">
+            Square Hospitality Trading Company is a premier home-décor and hospitality supplier known for its deep industry expertise and curated selection of premium products. Our foundation rests on two pillars: Comprehensive Knowledge and Meticulous Planning.
+          </p>
+          <h4 class="text-xl font-serif font-bold mb-4">Our Mission & Commitment</h4>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start">
+              <span class="text-gold-500 mr-3 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              <span>Stay ahead with the latest global products & technologies.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-gold-500 mr-3 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              <span>Employ and nurture top talent in the hospitality industry.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-gold-500 mr-3 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              <span>Drive sustainable growth through expertise and dedication.</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Learn More About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Product Categories Section -->
+  <section id="products" class="section">
+    <div class="container-custom">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="section-title">Product Categories</h2>
+        <p class="section-subtitle">Discover our comprehensive range of premium hospitality products</p>
+        <div class="w-24 h-1 bg-gold-500 mx-auto mb-6"></div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Food & Beverage Category -->
+        <div class="category-card h-96" data-aos="fade-up" data-aos-delay="100">
+          <img src="./src/assets/images/f&b.jpg" alt="Food & Beverage" class="w-full h-full object-cover">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-content">
+            <h3 class="text-2xl font-serif font-bold mb-2 text-white">Food & Beverage</h3>
+            <p class="mb-4">Chinaware, Cutlery, Glassware, Kitchenware, Buffetware</p>
+            <a href="#" class="btn bg-white/20 backdrop-blur-sm text-white hover:bg-white hover:text-primary-700 transition-all">View Items</a>
+          </div>
+        </div>
+        
+        <!-- Housekeeping Category -->
+        <div class="category-card h-96" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg" alt="Housekeeping" class="w-full h-full object-cover">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-content">
+            <h3 class="text-2xl font-serif font-bold mb-2 text-white">Housekeeping</h3>
+            <p class="mb-4">Housekeeping Items, Guest Amenities, Room Linen</p>
+            <a href="#" class="btn bg-white/20 backdrop-blur-sm text-white hover:bg-white hover:text-primary-700 transition-all">View Items</a>
+          </div>
+        </div>
+        
+        <!-- Hospitality Items Category -->
+        <div class="category-card h-96" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.pexels.com/photos/4857775/pexels-photo-4857775.jpeg" alt="Hospitality Items" class="w-full h-full object-cover">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-content">
+            <h3 class="text-2xl font-serif font-bold mb-2 text-white">Hospitality Items</h3>
+            <p class="mb-4">Décor Accents, Specialty Serving Pieces, Room Accessories</p>
+            <a href="#" class="btn bg-white/20 backdrop-blur-sm text-white hover:bg-white hover:text-primary-700 transition-all">View Items</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+          <!-- chinaware -->
+
+  <section id="product-showcase" class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <!-- You can replace this with your desired image -->
+          <img src="./src/assets/images/chinaware.jpg" alt="Product Showcase" class="rounded-lg shadow-elegant w-full h-auto">
+        </div>
+        <div data-aos="fade-left">
+          <h3 class="text-2xl md:text-3xl font-serif font-bold mb-6">ChinaWare</h3>
+          <p class="text-lg text-charcoal-700 mb-6 leading-relaxed">
+            Elevate every dining experience with our exquisite chinaware collection: precision-crafted porcelain plates and bowls that blend timeless elegance with modern durability.
+          </p>
+          <p class="text-lg text-charcoal-700 mb-6 leading-relaxed">
+            Each piece features refined textures and subtle detailing, designed to showcase your culinary creations as works of art.
+          </p>
+          <p class="text-lg text-charcoal-700 mb-6 leading-relaxed">
+            Make every meal memorable—serve in style.
+          </p>
+          <a href="#contact" class="btn btn-primary">Inquire About Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Descriptive Block with Image -->
+  <section id="product-showcase" class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <!-- You can replace this with your desired image -->
+          <img src="./src/assets/images/kitchen.jpg" alt="Product Showcase" class="rounded-lg shadow-elegant w-full h-auto">
+        </div>
+        <div data-aos="fade-left">
+          <h3 class="text-2xl md:text-3xl font-serif font-bold mb-6">KitchenWare</h3>
+          <p class="text-lg text-charcoal-700 mb-6 leading-relaxed">
+            our premium culinary tools and equipment are engineered for precision, durability, and effortless performance.
+          </p>
+          <p class="text-lg text-charcoal-700 mb-6 leading-relaxed">
+            From razor-sharp slicers to sleek prep stations, every piece is crafted in high-grade stainless steel to withstand the busiest commercial environments while elevating your workspace with a modern, professional aesthetic.
+          </p>
+          <p class="text-lg text-charcoal-700 mb-6 leading-relaxed">
+            Empower your chefs to deliver consistent, exquisite results—day in, day out.
+          </p>
+          <a href="#contact" class="btn btn-primary">Inquire About Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+            <!-- room linen -->
+  <section id="product-showcase" class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <!-- You can replace this with your desired image -->
+          <img src="./src/assets/images/roomlinen.jpg" alt="Product Showcase" class="rounded-lg shadow-elegant w-full h-auto">
+        </div>
+        <div data-aos="fade-left">
+          <h3 class="text-2xl md:text-3xl font-serif font-bold mb-6">Room Linen</h3>
+          <p class="text-lg text-charcoal-700 mb-6 leading-relaxed">
+            Transform every stay with our plush, high-thread-count linens, hotel-grade towels, and thoughtfully curated amenity kits—each selected to pamper your guests from arrival to departure.
+          </p>
+          <p class="text-lg text-charcoal-700 mb-6 leading-relaxed">
+            Complemented by sleek, professional-grade housekeeping supplies, our collection ensures spotless presentation and lasting freshness.
+          </p>
+          <p class="text-lg text-charcoal-700 mb-6 leading-relaxed">
+            From the softness of our sheets to the indulgent lather of our signature soaps, every detail is designed to deliver effortless luxury, impeccable comfort, and a truly memorable guest experience.
+          </p>
+          <a href="#contact" class="btn btn-primary">Inquire About Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section id="featured-products" class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="section-title">Featured Products</h2>
+        <p class="section-subtitle">Explore our most popular hospitality products</p>
+        <div class="w-24 h-1 bg-gold-500 mx-auto mb-6"></div>
+      </div>
+      <div class="swiper featured-products-swiper" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <!-- Product 1 -->
+          <div class="swiper-slide p-4">
+            <div class="product-card">
+              <div class="product-card-img-container">
+                <img src="./src/assets/images/basicplate.jpg" alt="Basic Plate" class="product-card-img">
+              </div>
+              <div class="product-card-content">
+                <h3 class="text-xl font-serif font-bold mb-2">Basic Plate</h3>
+                <p class="text-charcoal-600 mb-3">Premium white porcelain, elegant coupe design, perfect for fine dining.</p>
+                <a href="#" class="text-primary-700 font-medium hover:text-primary-800 transition-colors">View Specifications</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 2 -->
+          <div class="swiper-slide p-4">
+            <div class="product-card">
+              <div class="product-card-img-container">
+                <img src="./src/assets/images/premium.jpg" alt="Esprit Service Plate" class="product-card-img">
+              </div>
+              <div class="product-card-content">
+                <h3 class="text-xl font-serif font-bold mb-2">Esprit Service Plate</h3>
+                <p class="text-charcoal-600 mb-3">Gold-rimmed service plate with intricate detailing for upscale establishments.</p>
+                <a href="#" class="text-primary-700 font-medium hover:text-primary-800 transition-colors">View Specifications</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 3 -->
+          <div class="swiper-slide p-4">
+            <div class="product-card">
+              <div class="product-card-img-container">
+                <img src="./src/assets/images/kitchenware.png" alt="Royal Court Porcelain" class="product-card-img">
+              </div>
+              <div class="product-card-content">
+                <h3 class="text-xl font-serif font-bold mb-2">Kitchen ware</h3>
+                <p class="text-charcoal-600 mb-3">Kitchenware encompasses the essential tools and equipment—from pots and pans to spatulas and storage containers—that make cooking and serving meals efficient and enjoyable.</p>
+                <a href="#" class="text-primary-700 font-medium hover:text-primary-800 transition-colors">View Specifications</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 4 -->
+          <div class="swiper-slide p-4">
+            <div class="product-card">
+              <div class="product-card-img-container">
+                <img src="./src/assets/images/glasses.jpg" alt="Crystal Wine Glasses" class="product-card-img">
+              </div>
+              <div class="product-card-content">
+                <h3 class="text-xl font-serif font-bold mb-2">Crystal Glasses</h3>
+                <p class="text-charcoal-600 mb-3">Premium crystal wine glasses that enhance the tasting experience.</p>
+                <a href="#" class="text-primary-700 font-medium hover:text-primary-800 transition-colors">View Specifications</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 5 -->
+          <div class="swiper-slide p-4">
+            <div class="product-card">
+              <div class="product-card-img-container">
+                <img src="./src/assets/images/aminities.jpg" alt="Luxury Room Amenities" class="product-card-img">
+              </div>
+              <div class="product-card-content">
+                <h3 class="text-xl font-serif font-bold mb-2">Luxury Room Amenities</h3>
+                <p class="text-charcoal-600 mb-3">Premium guest amenities featuring organic ingredients and sustainable packaging.</p>
+                <a href="#" class="text-primary-700 font-medium hover:text-primary-800 transition-colors">View Specifications</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination mt-8"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section id="why-us" class="section">
+    <div class="container-custom">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="section-title">Why Choose Us</h2>
+        <p class="section-subtitle">What sets Square Hospitality Trading Company apart</p>
+        <div class="w-24 h-1 bg-gold-500 mx-auto mb-6"></div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-gold-500 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-serif font-bold mb-3">Vertical Integration & Planning</h3>
+          <p class="text-charcoal-700 mb-4">Our vertically integrated approach and meticulous planning ensures fast lead times and seamless delivery of all products.</p>
+          <ul class="space-y-2 text-charcoal-600">
+            <li class="flex items-start">
+              <span class="text-gold-500 mr-2 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              <span>Efficient supply chain management</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-gold-500 mr-2 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              <span>Reduced lead times</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-gold-500 mr-2 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              <span>Consistent quality control</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-gold-500 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-serif font-bold mb-3">Global Sourcing</h3>
+          <p class="text-charcoal-700 mb-4">Our international sourcing network allows us to bring you exceptional quality products at competitive prices.</p>
+          <ul class="space-y-2 text-charcoal-600">
+            <li class="flex items-start">
+              <span class="text-gold-500 mr-2 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              <span>Access to international premium products</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-gold-500 mr-2 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              <span>Competitive pricing</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-gold-500 mr-2 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              <span>Latest trends and innovations</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-gold-500 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-serif font-bold mb-3">Expert Support</h3>
+          <p class="text-charcoal-700 mb-4">Our team of hospitality professionals provides seamless ordering experiences and exceptional after-sales support.</p>
+          <ul class="space-y-2 text-charcoal-600">
+            <li class="flex items-start">
+              <span class="text-gold-500 mr-2 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              <span>Dedicated account managers</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-gold-500 mr-2 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              <span>Comprehensive after-sales service</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-gold-500 mr-2 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              <span>Product training and maintenance tips</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Clients Section -->
+  <section id="clients" class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="section-title">Our Valued Clients</h2>
+        <p class="section-subtitle">We are proud to partner with leading names in the industry</p>
+        <div class="w-24 h-1 bg-gold-500 mx-auto mb-6"></div>
+      </div>
+      <div class="flex justify-center" data-aos="fade-up">
+        <img src="./src/assets/images/clients.jpg" alt="Our Clients" class="max-w-full h-auto rounded-lg shadow-elegant">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Get in touch with our team of hospitality experts</p>
+        <div class="w-24 h-1 bg-gold-500 mx-auto mb-6"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Information -->
+        <div data-aos="fade-right">
+          <h3 class="text-2xl font-serif font-bold mb-6">Our Contact Information</h3>
+          <div class="space-y-6 mb-8">
+            <div class="flex items-start">
+              <div class="text-gold-500 mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold mb-1">Phone</h4>
+                <p class="text-charcoal-700">+966 50 998 3745</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="text-gold-500 mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold mb-1">Email</h4>
+                <p class="text-charcoal-700">mondher@horecasqure.com</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="text-gold-500 mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold mb-1">Address</h4>
+                <p class="text-charcoal-700">Bashar Ibn Bard, Al Olaya, Al Khobar, 34447, Saudi Arabia</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-elegant">
+            <h4 class="text-lg font-serif font-bold mb-4">Our Office Hours</h4>
+            <ul class="space-y-2">
+              <li class="flex justify-between">
+                <span class="font-medium">Sunday - Thursday:</span>
+                <span>9:00 AM - 6:00 PM</span>
+              </li>
+              <li class="flex justify-between">
+                <span class="font-medium">Friday:</span>
+                <span>Closed</span>
+              </li>
+              <li class="flex justify-between">
+                <span class="font-medium">Saturday:</span>
+                <span>10:00 AM - 4:00 PM</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="bg-white p-8 rounded-lg shadow-elegant" data-aos="fade-left">
+          <h3 class="text-2xl font-serif font-bold mb-6">Submit an Inquiry</h3>
+          <form id="contact-form" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-charcoal-700 mb-1">Full Name</label>
+              <input type="text" id="name" name="name" class="input-field" required>
+            </div>
+            <div>
+              <label for="company" class="block text-sm font-medium text-charcoal-700 mb-1">Company Name</label>
+              <input type="text" id="company" name="company" class="input-field" required>
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-charcoal-700 mb-1">Email Address</label>
+              <input type="email" id="email" name="email" class="input-field" required>
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-charcoal-700 mb-1">Phone Number</label>
+              <div class="flex">
+                <select id="country-code" name="country-code" class="input-field w-1/3 mr-2">
+                  <option value="+966">Saudi Arabia (+966)</option>
+                  <option value="+971">Dubai (+971)</option>
+                  <option value="+974">Qatar (+974)</option>
+                  <option value="+973">Bahrain (+973)</option>
+                  <option value="+965">Kuwait (+965)</option>
+                </select>
+                <input type="tel" id="phone" name="phone" class="input-field w-2/3" required>
+              </div>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-charcoal-700 mb-1">Message</label>
+              <textarea id="message" name="message" rows="4" class="input-field" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-full">Submit Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section id="cta-download" class="section bg-slate-400 text-white">
+    <div class="container-custom text-center py-16 md:py-24" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Ready to Elevate Your Hospitality Experience?</h2>
+      <p class="text-lg md:text-xl max-w-3xl mx-auto mb-10">
+        Browse our complete catalogue of premium hospitality products and take your establishment to the next level.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="./src/assets/pdf/Home Decor Shop Catalog Brochure_compressed (1).pdf" download="HorecaSquare_Catalogue.pdf" class="btn btn-primary">Download Catalogue</a>
+        <a href="#contact" class="btn bg-white text-blue-700 hover:bg-gray-100">Contact Us Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-charcoal-800 text-gray-300 py-16">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <!-- Company Info -->
+        <div>
+          <h3 class="text-2xl font-serif font-bold mb-4 text-white">
+            <img src="./src/assets/images/horecalogo.png" alt="Horeca Square Logo" class="h-12">
+          </h3>
+          <p class="mb-4 text-gray-300">Premium hospitality and home-décor supplier established in 2015, delivering exceptional quality and service.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-white hover:text-gold-500 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+              </svg>
+            </a>
+            <a href="#" class="text-white hover:text-gold-500 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z" />
+              </svg>
+            </a>
+            <a href="#" class="text-white hover:text-gold-500 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-bold mb-4 text-white">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-300 hover:text-gold-500 transition-colors">Download Catalogue (PDF)</a></li>
+            <li><a href="#about" class="text-gray-300 hover:text-gold-500 transition-colors">About Us</a></li>
+            <li><a href="#products" class="text-gray-300 hover:text-gold-500 transition-colors">Products</a></li>
+            <li><a href="#contact" class="text-gray-300 hover:text-gold-500 transition-colors">Contact</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-gold-500 transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter -->
+        <div>
+          <h4 class="text-lg font-bold mb-4 text-white">Stay Updated</h4>
+          <p class="text-gray-300 mb-4">Subscribe to our newsletter for the latest product updates and hospitality trends.</p>
+          <form class="flex">
+            <input type="email" placeholder="Your email address" class="px-4 py-2 rounded-l-lg focus:outline-none w-full" required>
+            <button type="submit" class="bg-gold-500 text-white px-4 py-2 rounded-r-lg hover:bg-gold-600 transition-colors">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Square Hospitality Trading Company. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
+
+<script>
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const sunIcon = document.getElementById('sunIcon');
+  const moonIcon = document.getElementById('moonIcon');
+  
+  const darkModeToggleMobile = document.getElementById('darkModeToggleMobile');
+  const sunIconMobile = document.getElementById('sunIconMobile');
+  const moonIconMobile = document.getElementById('moonIconMobile');
+
+  const body = document.body;
+
+  function updateIcons(theme) {
+    if (theme === 'dark') {
+      sunIcon.classList.add('hidden');
+      moonIcon.classList.remove('hidden');
+      sunIconMobile.classList.add('hidden');
+      moonIconMobile.classList.remove('hidden');
+    } else {
+      sunIcon.classList.remove('hidden');
+      moonIcon.classList.add('hidden');
+      sunIconMobile.classList.remove('hidden');
+      moonIconMobile.classList.add('hidden');
+    }
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      body.classList.add('dark-mode');
+    } else {
+      body.classList.remove('dark-mode');
+    }
+    updateIcons(theme);
+  }
+
+  // Check for saved theme in localStorage
+  let currentTheme = localStorage.getItem('theme');
+
+  // If no saved theme, check system preference
+  if (!currentTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    currentTheme = 'dark';
+  } else if (!currentTheme) {
+    currentTheme = 'light'; // Default to light
+  }
+  
+  applyTheme(currentTheme);
+  if (currentTheme === 'dark') { // Ensure localStorage is set if derived from system pref
+      localStorage.setItem('theme', 'dark');
+  }
+
+
+  function toggleTheme() {
+    const isDarkMode = body.classList.contains('dark-mode');
+    if (isDarkMode) {
+      applyTheme('light');
+      localStorage.setItem('theme', 'light');
+    } else {
+      applyTheme('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  }
+
+  darkModeToggle.addEventListener('click', toggleTheme);
+  darkModeToggleMobile.addEventListener('click', toggleTheme);
+
+  // Listen for system theme changes
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      const newColorScheme = event.matches ? "dark" : "light";
+      applyTheme(newColorScheme);
+      localStorage.setItem('theme', newColorScheme);
+    });
+  }
+</script>
+</body>
+</html>
+
+<script>
+    const cursorLight = document.getElementById('cursor-light');
+    if (cursorLight) {
+      document.addEventListener('mousemove', function(e) {
+        cursorLight.style.left = e.clientX + 'px';
+        cursorLight.style.top = e.clientY + 'px';
+      });
+      document.addEventListener('mouseenter', function() {
+        cursorLight.style.opacity = '1';
+      });
+      document.addEventListener('mouseleave', function() {
+        cursorLight.style.opacity = '0';
+      });
+    }
+  </script>
+</body>
+</html>
