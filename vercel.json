@@ -8,5 +8,9 @@
         "distDir": "dist"
       }
     }
+  ],
+  "routes": [
+    { "src": "/pdf/(.*)", "dest": "/pdf/$1" },
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }

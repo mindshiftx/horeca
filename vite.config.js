@@ -14,7 +14,21 @@ export default defineConfig({
       input: {
         main: 'public/index.html',
         services: 'public/services.html'
+      },
+      
+      // Ensure PDF files are included in the build
+      output: {
+        assetFileNames: (assetInfo) => {
+          // Keep PDF files in their original directory structure
+          if (assetInfo.name.endsWith('.pdf')) {
+            return 'pdf/[name][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        }
       }
-    }
+    },
+    
+    // Ensure assets like PDFs are copied to the build output
+    assetsInclude: ['**/*.pdf']
   }
 });
